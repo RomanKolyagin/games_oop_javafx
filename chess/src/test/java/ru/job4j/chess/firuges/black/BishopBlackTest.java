@@ -21,6 +21,4 @@ public class BishopBlackTest {
         bb = bb.copy(Cell.G5);
         assertThat(bb.position()).isEqualTo(expected);
     }
-
-
 }
