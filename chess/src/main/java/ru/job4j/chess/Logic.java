@@ -24,8 +24,9 @@ public final class Logic {
         for (Figure figure : figures) {
             for (Cell step : steps) {
                 if (figure != null && figure.position().equals(step)) {
-                    throw new OccupiedCellException("Could not move to occupied cell");
+                        throw new OccupiedCellException("Could not move to occupied cell");
                 }
+            }
         }
         return true;
     }
