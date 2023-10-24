@@ -28,7 +28,7 @@ public class BishopBlack implements Figure {
         int deltaX = Integer.compare(dest.getX() - position.getX(), 0);
         int deltaY = Integer.compare(dest.getY() - position.getY(), 0);
         for (int index = 0; index < size; index++) {
-            steps[index] = ...
+            steps[index] = ...;
         }
         return steps;
     }
