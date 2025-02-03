@@ -34,4 +34,13 @@ class BishopBlackTest {
         Cell[] way = bishopBlack.way(Cell.G5);
         assertThat(way).isEqualTo(expected);
     }
+
+    @Test
+    void whenDiagonalC1ToG6ThenException() {
+        Cell position = Cell.C1;
+        Figure bishopBlack = new BishopBlack(position);
+        assertThatThrownBy(() -> bishopBlack.way(Cell.G6))
+                .isInstanceOf(ImpossibleMoveException.class)
+                .hasMessage("Could not move by diagonal from C1 to G6");
+    }
 }
