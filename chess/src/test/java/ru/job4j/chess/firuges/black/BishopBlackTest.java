@@ -25,4 +25,13 @@ class BishopBlackTest {
         Figure copy = bishopBlack.copy(expectedCopy);
         assertThat(copy.position()).isEqualTo(expectedCopy);
     }
+
+    @Test
+    void whenC1wayG5ThenD2E3F4G5() {
+        Cell[] expected = {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
+        Cell position  = Cell.C1;
+        Figure bishopBlack = new BishopBlack(position);
+        Cell[] way = bishopBlack.way(Cell.G5);
+        assertThat(way).isEqualTo(expected);
+    }
 }
